@@ -1,0 +1,4 @@
+Virtuelle Umgebung: python -m virt venv
+Quelle: source virt/Scripts/activate
+Pip liste: pip freeze
+Flask: pip install flask

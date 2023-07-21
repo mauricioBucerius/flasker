@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- method gibt die Abfrage an:  get: zeigt alles in der Suchleiste an
+                                  post: lässt die Daten aus der Leiste raus-->
+<form method="get">
+  Vorname:<input type="text" name="vorname"> <br>
+  Nachname:<input type="text" name="nachname"> <br>
+  Password:<input type="password" name="password"> <br> <br>
+
+  <!-- Radio Boxes -->
+  <input type="radio" name="Geschlecht" value="f"> weiblich<br>
+  <input type="radio" name="Geschlecht" value="m"> männlich<br>
+  <input type="radio" name="Geschlecht" value="n"> anderes<br><br>
+
+  <!-- Check Box -->
+  <input type="checkbox" name="kannHTML" value="True"> Ich kann HTML <br>
+  <input type="checkbox" name="kannCSS" value="True"> Ich kann CSS <br><br>
+
+  <!-- Button -->
+  <input type="button" onclick="alert('Hi da draußen!')" value="Klick mich Button">
+  <input type="submit" value="Klick mich">
+</form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% extends 'base.html' %}
+    {% block content %}
+        <h1>
+            Hello {{ first_name|capitalize }}
+            </h1>
+            <p>
+                {{ stuff|safe }}
+            </p>
+            <p>
+                {{ stuff|striptags }}
+            </p>
+            <p>
+                {{ stuff|title }}
+            </p>
+            <h3>
+                Favorite Pizza:
+            </h3>
+            <p>
+                {% for topping in pizze %}
+                    {% if topping == 41 %}
+                        {{ topping + 1000}} <br>
+                    {% else %}
+                        {{ topping }} <br>
+                    {% endif %}
+                {% endfor %}
+            </p>
+            <p>
+                <!-- mit "." können auf die einzelnen Elemente zugegriffen werden -->
+                I like {{ pizze.1 }} the most
+            </p>
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<div class="title">
+    <h1>Übungswebseite</h1>
+</div>
+
+<hr> <!-- Horizontaler Strich -->
+{% endblock %}
+
+{% block body %}
+    <!-- verschiedene Überschriften -->
+    <h2>Überschrift in groß</h2>
+    <h3>Überschrift in eher groß</h3>
+    <h4>Überschrift eher klein</h4>
+    <h5>Überschrift in klein</h5>
+    <h6>Überschrift in mini</h6>
+
+     <!-- p steht für Paragraph -->
+    <p title="Loren 'named' Ipsum">
+        <div class="Test_Text">
+            <h3><b> <!-- Fett gedruckt -->
+                Beispiel Text <br> <!-- Line Break -->
+            </b></h3>
+
+            <i> <!-- kursiver Text -->
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore <br>
+            </i>
+
+            <small> <!-- klein geschriebener Text -->
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd <br>
+            </small>
+            <mark> <!-- markierter Text -->
+                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing <br>
+            </mark>
+
+            <del> <!-- durgestrichener Text -->
+                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero <br>
+            </del>
+
+            <ins> <!-- unterstreicht Text -->
+                eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum <br>
+            </ins>
+            dolor sit amet. <br>
+            <q>
+                Zitat
+            </q> <br>
+            <p class="Text_Formatierung">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            <!-- Verschachteln von Tags -->
+            <strong>
+                Ende des Textes
+            </strong> <br> <br>
+
+            <code>
+                #Dies sieht aus, wie Code <br>
+                def func(x): <br>
+                    pass <br>
+            </code> <br> <br>
+            <!-- x_1 = e^x -->
+            x
+            <sub> <!-- tiefstellen -->
+                1
+            </sub>
+            =
+            e
+            <sup> <!-- hochstellen -->
+                x
+            </sup>
+        </div>
+    </p>
+
+    <!-- ---------------------------------------------------------------------------- -->
+    <!-- Darstellung eines Links (href), hier Link auf Google -->
+    <p>Link: <a href="https://www.google.de/" >Google</a> </p>
+    <br>
+
+    <!-- ---------------------------------------------------------------------------- -->
+    <!-- Bild hinzufügen: src: Quelle, an der das Bild gespeichert ist, alt: was alternativ
+                            angezeigt wird-->
+    <img src="D:\Benutzer\Dokumente\Python_Skripte\Python_Starting\Flask_Starting\images\nasenaffe.jpg"
+         alt="Bild nicht angezeigt" width="240" height="240" align="center"
+            title="Mandrill"> <br>
+
+    <!-- ---------------------------------------------------------------------------- -->
+    <br> <br>
+    <!-- Erstellen einer Tabelle -->
+    <!--    border: erstellt einen Rand um die Tabelle
+            width: streckt die Tabelle über den gesamten Browser -->
+    <p class="abelle"><b>Tabelle</b></p>
+    <table border="1">
+        <!-- neue Zeile -->
+        <tr>
+            <td> <b>1. Spalte</b> </td>
+            <td> <b>2. Spalte</b> </td>
+            <td> <b>3. Spalte</b> </td>
+
+        </tr>
+        <tr>
+            <!-- einzelnen Einträge in der Zeile -->
+            <td>a11</td>
+            <td>a12</td>
+            <td>a13</td>
+        </tr>
+        <tr>
+            <!-- 2. Zeile mit verschiedenen Einträgen-->
+            <td>a21</td>
+            <td>a22</td>
+            <td>a23</td>
+        </tr>
+    </table>
+
+    <br> <br>
+    <!-- ---------------------------------------------------------------------------- -->
+    <!-- Erstellen einer Liste  ul (unordered list, zählt nicht durch)
+                                ol (ordered list, zählt durch) -->
+    <p><b>Unordered List</b></p>
+    <ul>
+        <!-- li: list item -->
+        <li>Kaffee</li>
+        <li>Schinken</li>
+        <li>Käse</li>
+
+    </ul>
+
+    <!-- type: verschiedene Arten, wie durchnummeriert werden kann -->
+    <p><b>Ordered List</b></p>
+    <ol type="I">
+        <!-- li: list item -->
+        <li>Kaffee</li>
+        <li>Schinken</li>
+        <li>Käse</li>
+
+    </ol>
+
+    <p><b>Description List</b></p>
+    <dl>
+        <dt>Kaffee</dt>
+        <dd>Mein Wachmacher</dd>
+        <dd>Schwarzes Gold</dd>
+
+        <dt>Pizza</dt>
+        <dd>Lieblingsessen</dd>
+        <dd>Pure Liebe</dd>
+    </dl>
+
+    <!-- ---------------------------------------------------------------------------- -->
+    <!-- Div Struktur auf Webseite, weist Klasse "meineListe" zu -->
+    <div class="meineListe">
+        <dl>
+            <!-- id muss global gesehen einzigartig sein, sonst gibt es Probleme
+                funktioniert sonst genauso, wie mit class (über CSS)-->
+            <dt id="roterKaffee">Kaffee</dt>
+            <dd>Mein Wachmacher</dd>
+            <dd>Schwarzes Gold</dd>
+
+            <dt><span style="color:#154360">Pizza</span></dt>
+            <dd>Lieblingsessen</dd>
+            <dd>Pure Liebe</dd>
+        </dl>
+    </div>
+{% endblock %}
+
